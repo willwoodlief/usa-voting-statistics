@@ -1,0 +1,23 @@
+
+<phpunit bootstrap="bootstrap.php">
+    <php>
+        <!--TEST_TYPE=cronjob phpunit  #example of setting this on the command line-->
+        <env name="TEST_TYPE" value="automatic"/>
+        <ini name="display_errors" value="On" />
+        <ini name="display_startup_errors" value="On" />
+        <ini name="xdebug.var_display_max_data" value="-1" />
+        <ini name="xdebug.var_display_max_children" value="-1" />
+        <ini name="xdebug.var_display_max_depth" value="-1" />
+    </php>
+    <testsuites>
+        <testsuite name="Framework">
+            <file></file>
+        </testsuite>
+
+    </testsuites>
+
+    <listeners>
+
+    </listeners>
+
+</phpunit>

@@ -1,0 +1,82 @@
+
+#if the plugin block is left out, it defaults to below anyway
+Plugin:
+  Run: true
+  Ignore: false
+
+
+Note:
+  #an array of one or more note objects
+
+    #single author of the note
+  - Author: 'Will'
+    # date is day month year format: example 20 November 2017
+    Date: '20 November 2017'
+    # any length unicode utf8, html tags are always stripped out when processed
+    Note: 'Sample Note'
+    # internal comments are just notes for the note takers themselves without being part of the note
+    Reminder: 'anything here and nobody will see it'
+
+
+
+Location:
+  # location is an array of one or more state objects
+  - State: 'Texas'
+    County:
+      - 'Walker'
+      - 'Montgomery'
+
+Race:
+  # optional only if plugin type is note
+  #describes each race, an array of objects
+    #party is [Democratic,Republican,Green,Libertarian,multi]
+  - Party: 'Democratic'
+
+    #type is [Primary,General,Runoff]
+    Type: 'Primary'
+
+    #locality is [State,National]
+    Locality: 'National'
+
+    #office is [President,Senator,Representative,Governor]
+    Office: 'President'
+    Year: '2016'
+    Month: 'March'
+    Day: '1'
+
+#use semver.org format
+Version:
+  Major: '1'
+  Minor: '0'
+  Bugfix: '0'
+
+#date last modified in day month year
+Modified:
+  Year: '2017'
+  Month: 'November'
+  Day: '20'
+
+Meta:
+
+  # a name to call this, can be anything and does not have to be unique
+  Name: "Will's First Gatherer Plugin"
+
+  Description: "This will pull data from Walker County Texas"
+
+
+  #one of more authors, its an array, not optional
+  Author:
+    - 'Will Woodlief'
+
+
+
+
+Program:
+
+  # one of [Perl,Python, Ruby, PHP ] case insensitive
+  Language: 'ruby'
+
+  # relative path in the plugin and program name, with extension
+  Program_Name: 'program/main.rb'
+
+  # programs are called with the "language program_name [optional test switch -t] [temp full file path]"

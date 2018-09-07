@@ -1,0 +1,37 @@
+<!-- this will hold information about how each precinct voted for each candidate-->
+<!--todo: convert this output to xsd-->
+<?xml version="1.0" standalone="yes"?>
+<output>
+    <meta>
+        <plugin location="file path"/>
+        <!--A unique id that is filled in by the framework and not the app-->
+        <guid> </guid>
+        <times>
+            <start unix="integer"/>
+            <end unix="integer"/>
+        </times>
+        <notes> </notes>
+        <!--any kind of notes here-->
+    </meta>
+<data>
+    <state isocode="?(required)">
+        <county name="?" isocode="?(required)">
+            <race type="[Primary,General,Runoff]"
+                  locality="[State,National]"
+                  office="[President,Senator,Representative,Governor]"
+                  date="isodate format">
+                <!--is error to have president as state locality and to have governor as national locality-->
+                <precint name="?" population="integer(required)">
+                    <voting_method name="?" company = "?" type="machine|paper|scanned|mail|unknown">
+                        <candidate name="?"  party="[Democratic,Republican,Green,Libertarian]">
+                            <votes>Integer</votes>
+                        </candidate>
+                    </voting_method>
+                </precint>
+            </race>
+        </county>
+    </state>
+</data>
+</output>
+
+

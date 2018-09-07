@@ -1,0 +1,33 @@
+<!--todo: convert this test to xsd-->
+<?xml version="1.0" standalone="yes"?>
+<tests>
+    <meta>
+        <plugin location="file path"/>
+        <times>
+            <start unix="integer"/>
+            <end unix="integer"/>
+        </times>
+        <notes> </notes>
+        <!--any kind of notes here-->
+    </meta>
+    <status code="pass|fail"/>
+    <number_tests_run>integer required</number_tests_run>
+    <failings>
+        <!--0 or more failings here-->
+        <failing>
+            <message/>
+            <line/>
+        </failing>
+    </failings>
+
+    <errors>
+        <!--0 or more errors here-->
+        <error>
+            <message/>
+            <trace_as_string/>
+            <line/>
+            <references>text or xml</references>
+            <!--place to hold an earlier and potentially malformed error xml-->
+        </error>
+    </errors>
+</tests>

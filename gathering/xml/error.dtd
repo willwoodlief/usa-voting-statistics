@@ -1,0 +1,23 @@
+<!--todo: convert this error to xsd-->
+<?xml version="1.0" standalone="yes"?>
+<broke>
+    <meta>
+        <plugin location="file path"/>
+        <times>
+            <start unix="integer"/>
+            <end unix="integer"/>
+        </times>
+        <notes> </notes>
+        <!--any kind of notes here-->
+    </meta>
+    <errors>
+        <!--list of 1 or more error here-->
+        <error>
+            <message> html is escaped here</message>
+            <code/>
+            <trace_as_string> </trace_as_string>
+            <references> text or xml </references>
+            <!--references holds printed output from a crashing call or can hold an earlier malformed xml converted to string-->
+        </error>
+    </errors>
+</broke>
